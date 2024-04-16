@@ -1,347 +1,421 @@
 #include <iostream>
-#include <stdio.h>
 #include <cstring>
 
 using namespace std;
 
 int main() {
-  // Nível 1
+    // Nível 1
+    // Exercício 1
+    string nome = "João";
+    cout << "Nome: " << nome << endl;
 
-  // 1.
-  char nome[] = "Seu nome";
-  printf("Meu nome é %s\n", nome);
+    // Exercício 2
+    char vogais[] = {'a', 'e', 'i', 'o', 'u'};
+    cout << vogais[0] << endl;
+    cout << vogais[1] << endl;
+    cout << vogais[2] << endl;
+    cout << vogais[3] << endl;
+    cout << vogais[4] << endl;
 
-  // 2.
-  char vogais[5] = {'a', 'e', 'i', 'o', 'u'};
-  printf("%c\n", vogais[0]);
-  printf("%c\n", vogais[1]);
-  printf("%c\n", vogais[2]);
-  printf("%c\n", vogais[3]);
-  printf("%c\n", vogais[4]);
-
-  // 3.
-  char letra;
-  scanf(" %c", &letra);
-  if (letra == 'a') {
-    printf("A letra %c é uma vogal.\n", letra);
-  } else if (letra == 'e') {
-    printf("A letra %c é uma vogal.\n", letra);
-  } else if (letra == 'i') {
-    printf("A letra %c é uma vogal.\n", letra);
-  } else if (letra == 'o') {
-    printf("A letra %c é uma vogal.\n", letra);
-  } else if (letra == 'u') {
-    printf("A letra %c é uma vogal.\n", letra);
-  } else {
-    printf("A letra %c não é uma vogal.\n", letra);
-  }
-
-  // 4.
-  char palavra[10];
-  scanf(" %s", palavra);
-  printf("%s\n", palavra);
-
-  // 5.
-  char frase[20];
-  scanf(" %[^\n]%*c", frase); // Lê frase com espaços
-  printf("%s\n", frase);
-
-  // Nível 2
-
-  // 6.
-  char numeros[10] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
-  printf("%c\n", numeros[0]);
-  printf("%c\n", numeros[2]);
-  printf("%c\n", numeros[4]);
-  printf("%c\n", numeros[6]);
-  printf("%c\n", numeros[8]);
-
-  // 7.
-  char frutas[5][10] = {"Maçã", "Banana", "Laranja", "Pera", "Uva"};
-  printf("%s\n", frutas[3]);
-
-  // 8.
-  char cores[7][10] = {"Vermelho", "Verde", "Azul", "Amarelo", "Laranja", "Roxo", "Preto"};
-  int corNum;
-  scanf("%d", &corNum);
-  printf("%s\n", cores[corNum - 1]);
-
-  // 9.
-  char animais[10][10] = {"Cachorro", "Gato", "Cavalo", "Vaca", "Porco", "Galinha", "Coelho", "Ovelha", "Macaco", "Peixe"};
-  char animal;
-  scanf(" %c", &animal);
-  if (animal == 'C') {
-    printf("%s\n", animais[0]);
-  } else if (animal == 'G') {
-    printf("%s\n", animais[1]);
-  } else if (animal == 'C') {
-    printf("%s\n", animais[2]);
-  } else if (animal == 'V') {
-    printf("%s\n", animais[3]);
-  } else if (animal == 'P') {
-    printf("%s\n", animais[4]);
-  } else if (animal == 'G') {
-    printf("%s\n", animais[5]);
-  } else if (animal == 'C') {
-    printf("%s\n", animais[6]);
-  } else if (animal == 'O') {
-    printf("%s\n", animais[7]);
-  } else if (animal == 'M') {
-    printf("%s\n", animais[8]);
-  } else if (animal == 'P') {
-    printf("%s\n", animais[9]);
-  }
-
-// 10.
-char dias[7][10] = {"Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"};
-int diaNum;
-scanf("%d", &diaNum);
-printf("%s\n", dias[diaNum - 1]);
-
-// Nível 3
-
-// 11.
-char palavra1[10], palavra2[10];
-scanf(" %s %s", palavra1, palavra2);
-if (strcmp(palavra1, palavra2) < 0) {
-  printf("%s\n", palavra1);
-} else {
-  printf("%s\n", palavra2);
-}
-
-// 12.
-char frase[20];
-int vogais = 0;
-scanf(" %[^\n]%*c", frase);
-if (frase[0] == 'a') {
-  vogais++;
-}
-if (frase[1] == 'e') {
-  vogais++;
-}
-if (frase[2] == 'i') {
-  vogais++;
-}
-if (frase[3] == 'o') {
-  vogais++;
-}
-if (frase[4] == 'u') {
-  vogais++;
-}
-printf("O número de vogais na frase é: %d\n", vogais);
-
-// 13.
-char texto[50];
-int posicaoA = -1;
-scanf(" %[^\n]%*c", texto);
-if (texto[0] == 'a') {
-  posicaoA = 0;
-} else if (texto[1] == 'a') {
-  posicaoA = 1;
-} else if (texto[2] == 'a') {
-  posicaoA = 2;
-} else if (texto[3] == 'a') {
-  posicaoA = 3;
-} else if (texto[4] == 'a') {
-  posicaoA = 4;
-}
-if (posicaoA == -1) {
-  printf("A letra 'a' não foi encontrada no texto.\n");
-} else {
-  printf("A primeira ocorrência da letra 'a' está na posição %d.\n", posicaoA);
-}
-
-// 14.
-char palavra[10];
-int tamanhoPalavra;
-scanf(" %s", palavra);
-tamanhoPalavra = strlen(palavra);
-printf("%c", palavra[tamanhoPalavra - 1]);
-printf("%c", palavra[tamanhoPalavra - 2]);
-printf("%c", palavra[tamanhoPalavra - 3]);
-printf("%c", palavra[tamanhoPalavra - 4]);
-printf("%c", palavra[tamanhoPalavra - 5]);
-printf("\n");
-
-// 15.
-char frase[20];
-scanf(" %[^\n]%*c", frase);
-if (frase[0] == 'a') {
-  frase[0] = '*';
-}
-if (frase[1] == 'e') {
-  frase[1] = '*';
-}
-if (frase[2] == 'i') {
-  frase[2] = '*';
-}
-if (frase[3] == 'o') {
-  frase[3] = '*';
-}
-if (frase[4] == 'u') {
-  frase[4] = '*';
-}
-printf("%s\n", frase);
-
-// Nível 4
-
-// 16.
-char nomes[10][20], sobrenomes[10][20];
-int idades[10];
-for (int i = 0; i < 10; i++) {
-  scanf(" %s %s %d", nomes[i], sobrenomes[i], &idades[i]);
-}
-printf("%s %s - %d anos\n", nomes[0], sobrenomes[0], idades[0]);
-printf("%s %s - %d anos\n", nomes[1], sobrenomes[1], idades[1]);
-printf("%s %s - %d anos\n", nomes[2], sobrenomes[2], idades[2]);
-printf("%s %s - %d anos\n", nomes[3], sobrenomes[3], idades[3]);
-printf("%s %s - %d anos\n", nomes[4], sobrenomes[4], idades[4]);
-
-// 17.
-char produtos[20][20];
-float precos[20];
-for (int i = 0; i < 10; i++) {
-  scanf(" %s %f", produtos[i], &precos[i]);
-}
-printf("%s - R$ %.2f\n", produtos[0], precos[0]);
-printf("%s - R$ %.2f\n", produtos[1], precos[1]);
-printf("%s - R$ %.2f\n", produtos[2], precos[2]);
-printf("%s - R$ %.2f\n", produtos[3], precos[3]);
-printf("%s - R$ %.2f\n", produtos[4], precos[4]);
-
-// 18.
-char cidades[15][20];
-for (int i = 0; i < 15; i++) {
-  scanf(" %s", cidades[i]);
-}
-if (strcmp(cidades[0], cidades[1]) > 0) {
-  char temp[20];
-  strcpy(temp, cidades[0]);
-  strcpy(cidades[0], cidades[1]);
-  strcpy(cidades[1], temp);
-}
-if (strcmp(cidades[1], cidades[2]) > 0) {
-  char temp[20];
-  strcpy(temp, cidades[1]);
-  strcpy(cidades[1], cidades[2]);
-  strcpy(cidades[2], temp);
-}
-if (strcmp(cidades[2], cidades[3]) > 0) {
-  char temp[20];
-  strcpy(temp, cidades[2]);
-  strcpy(cidades[2], cidades[3]);
-  strcpy(cidades[3], temp);
-}
-if (strcmp(cidades[3], cidades[4]) > 0) {
-  char temp[20];
-  strcpy(temp, cidades[3]);
-  strcpy(cidades[3], cidades[4]);
-  strcpy(cidades[4], temp);
-}
-printf("%s\n", cidades[0]);
-printf("%s\n", cidades[1]);
-printf("%s\n", cidades[2]);
-printf("%s\n", cidades[3]);
-printf("%s\n", cidades[4]);
-
-// 19.
-char texto[50];
-int palavras = 0;
-scanf(" %[^\n]%*c", texto);
-if (texto[0] == ' ') {
-  palavras++;
-}
-if (texto[1] == ' ') {
-  palavras++;
-}
-if (texto[2] == ' ') {
-  palavras++;
-}
-if (texto[3] == ' ') {
-  palavras++;
-}
-if (texto[4] == ' ') {
-  palavras++;
-}
-palavras++; // Conta a última palavra
-printf("O número de palavras no texto é: %d\n", palavras);
-
-// 20.
-char frase[20];
-int tamanhoFrase, maiorPalavra = 0, posicaoInicio = 0;
-scanf(" %[^\n]%*c", frase);
-tamanhoFrase = strlen(frase);
-if (frase[0] != ' ') {
-  maiorPalavra = 1;
-}
-if (frase[1] != ' ') {
-  if (maiorPalavra < 2) {
-    maiorPalavra = 2;
-  }
-}
-if (frase[2] != ' ') {
-  if (maiorPalavra < 3) {
-    maiorPalavra = 3;
-  }
-}
-if (frase[3] != ' ') {
-  if (maiorPalavra < 4) {
-    maiorPalavra = 4;
-  }
-}
-if (frase[4] != ' ') {
-  if (maiorPalavra < 5) {
-    maiorPalavra = 5;
-  }
-}
-for (int i = 1; i < tamanhoFrase; i++) {
-  if (frase[i] == ' ' && frase[i - 1] != ' ') {
-    if (i - posicaoInicio > maiorPalavra) {
-      maiorPalavra = i - posicaoInicio;
+    // Exercício 3
+    string letra;
+    cout << "Digite uma letra: ";
+    cin >> letra;
+    if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+        cout << "É uma vogal." << endl;
+    } else {
+        cout << "Não é uma vogal." << endl;
     }
-    posicaoInicio = i;
-  }
-}
-if (tamanhoFrase - posicaoInicio > maiorPalavra) {
-  maiorPalavra = tamanhoFrase - posicaoInicio;
-}
-for (int i = tamanhoFrase - 1; i >= 0; i--) {
-  if (frase[i] != ' ') {
-    printf("%c", frase[i]);
-  } else if (i - posicaoInicio < maiorPalavra) {
-    printf("%c", frase[i]);
-  } else {
-    break;
-  }
-}
-printf("\n");
 
-// Desafio
-char frase[20], fraseInvertida[20];
-int tamanhoFrase;
-scanf(" %[^\n]%*c", frase);
-tamanhoFrase = strlen(frase);
-for (int i = 0; i < tamanhoFrase; i++) {
-  fraseInvertida[tamanhoFrase - i - 1] = frase[i];
-}
-printf("%s\n", fraseInvertida);
+    // Exercício 4
+    char palavra[10];
+    cout << "Digite uma palavra: ";
+    cin >> palavra;
+    cout << "Palavra: " << palavra << endl;
 
-// Bônus
-char texto[50];
-int palavras = 0, frases = 0, paragrafos = 0;
-scanf(" %[^\n]%*c", texto);
-for (int i = 0; i < strlen(texto); i++) {
-  if (texto[i] == ' ') {
-    palavras++;
-  } else if (texto[i] == '.') {
-    frases++;
-  } else if (texto[i] == '\n') {
-    paragrafos++;
-  }
+    // Exercício 5
+    char frase[20];
+    cout << "Digite uma frase: ";
+    cin.ignore();
+    cin.getline(frase, 20);
+    cout << "Frase: " << frase << endl;
+
+    // Nível 2
+    // Exercício 1
+    char numeros[] = {'2', '4', '6', '8', '1', '3', '5', '7', '9'};
+    cout << numeros[0] << endl;
+    cout << numeros[1] << endl;
+    cout << numeros[2] << endl;
+    cout << numeros[3] << endl;
+    cout << numeros[4] << endl;
+
+    // Exercício 2
+    char frutas[][20] = {"Banana", "Maçã", "Pera", "Uva", "Melancia"};
+    cout << "Fruta na posição 3: " << frutas[2] << endl;
+
+    // Exercício 3
+    char cores[][10] = {"Vermelho", "Laranja", "Amarelo", "Verde", "Azul", "Anil", "Violeta"};
+    int posicao;
+    cout << "Digite um número entre 1 e 7: ";
+    cin >> posicao;
+    cout << "Cor na posição " << posicao << ": " << cores[posicao - 1] << endl;
+
+    // Exercício 4
+    char animais[][20] = {"Gato", "Cachorro", "Elefante", "Leão", "Tigre", "Cavalo", "Vaca", "Girafa", "Pato", "Papagaio"};
+    char caractere;
+    cout << "Digite uma letra: ";
+    cin >> caractere;
+    if (caractere == 'G' || caractere == 'C' || caractere == 'E' || caractere == 'L' || caractere == 'T' || caractere == 'C' || caractere == 'V' || caractere == 'P') {
+        cout << "Animal: ";
+        switch(caractere) {
+            case 'G':
+                cout << "Gato";
+                break;
+            case 'C':
+                cout << "Cachorro";
+                cout << "Cavalo";
+                break;
+            case 'E':
+                cout << "Elefante";
+                break;
+            case 'L':
+                cout << "Leão";
+                break;
+            case 'T':
+                cout << "Tigre";
+                break;
+            case 'V':
+                cout << "Vaca";
+                break;
+            case 'P':
+                cout << "Pato";
+                break;
+        }
+        cout << endl;
+    }
+
+    // Exercício 5
+    char dias[][15] = {"Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"};
+    cout << "Digite um número entre 1 e 7: ";
+    cin >> posicao;
+    cout << "Dia da semana na posição " << posicao << ": " << dias[posicao - 1] << endl;
+
+    // Nível 3
+    // Exercício 1
+    char palavra1[10], palavra2[10];
+    cout << "Digite a primeira palavra: ";
+    cin >> palavra1;
+    cout << "Digite a segunda palavra: ";
+    cin >> palavra2;
+    if (strcmp(palavra1, palavra2) > 0) {
+        cout << "A primeira palavra é maior em ordem alfabética." << endl;
+    } else if (strcmp(palavra1, palavra2) < 0) {
+        cout << "A segunda palavra é maior em ordem alfabética." << endl;
+    } else {
+        cout << "As palavras são iguais." << endl;
+    }
+
+    // Exercício 2
+    char frase_vogais[20];
+    strcpy(frase_vogais, frase);
+    int num_vogais = 0;
+    if (frase_vogais[0] == 'a' || frase_vogais[0] == 'e' || frase_vogais[0] == 'i' || frase_vogais[0] == 'o' || frase_vogais[0] == 'u') num_vogais++;
+    if (frase_vogais[1] == 'a' || frase_vogais[1] == 'e' || frase_vogais[1] == 'i' || frase_vogais[1] == 'o' || frase_vogais[1] == 'u') num_vogais++;
+    if (frase_vogais[2] == 'a' || frase_vogais[2] == 'e' || frase_vogais[2] == 'i' || frase_vogais[2] == 'o' || frase_vogais[2] == 'u') num_vogais++;
+    if (frase_vogais[3] == 'a' || frase_vogais[3] == 'e' || frase_vogais[3] == 'i' || frase_vogais[3] == 'o' || frase_vogais[3] == 'u') num_vogais++;
+    if (frase_vogais[4] == 'a' || frase_vogais[4] == 'e' || frase_vogais[4] == 'i' || frase_vogais[4] == 'o' || frase_vogais[4] == 'u') num_vogais++;
+    cout << "Número de vogais na frase: " << num_vogais << endl;
+
+    // Exercício 3
+    char texto[50];
+    cout << "Digite um texto: ";
+    cin.ignore();
+    cin.getline(texto, 50);
+    char *ptr = strchr(texto, 'a');
+    if (ptr != nullptr) {
+        cout << "Posição da primeira letra 'a': " << (ptr - texto) << endl;
+    } else {
+        cout << "A letra 'a' não foi encontrada no texto." << endl;
+    }
+
+    // Exercício 4
+    char palavra_invertida[10];
+    cout << "Digite uma palavra: ";
+    cin >> palavra_invertida;
+    cout << "Palavra invertida: " << palavra_invertida[9] << palavra_invertida[8] << palavra_invertida[7] << palavra_invertida[6] << palavra_invertida[5] << palavra_invertida[4] << palavra_invertida[3] << palavra_invertida[2] << palavra_invertida[1] << palavra_invertida[0] << endl;
+
+    // Exercício 5
+    char frase_substituida[20];
+    strcpy(frase_substituida, frase);
+    if (frase_substituida[0] == 'a' || frase_substituida[0] == 'e' || frase_substituida[0] == 'i' || frase_substituida[0] == 'o' || frase_substituida[0] == 'u') frase_substituida[0] = '*';
+    if (frase_substituida[1] == 'a' || frase_substituida[1] == 'e' || frase_substituida[1] == 'i' || frase_substituida[1] == 'o' || frase_substituida[1] == 'u') frase_substituida[1] = '*';
+    if (frase_substituida[2] == 'a' || frase_substituida[2] == 'e' || frase_substituida[2] == 'i' || frase_substituida[2] == 'o' || frase_substituida[2] == 'u') frase_substituida[2] = '*';
+    if (frase_substituida[3] == 'a' || frase_substituida[3] == 'e' || frase_substituida[3] == 'i' || frase_substituida[3] == 'o' || frase_substituida[3] == 'u') frase_substituida[3] = '*';
+    if (frase_substituida[4] == 'a' || frase_substituida[4] == 'e' || frase_substituida[4] == 'i' || frase_substituida[4] == 'o' || frase_substituida[4] == 'u') frase_substituida[4] = '*';
+    cout << "Frase com vogais substituídas: " << frase_substituida << endl;
+
+    // Nível 4
+    // Exercício 1
+    char nomes[10][50];
+    int idades[10];
+    cout << "Digite o nome da pessoa 1: ";
+    cin >> nomes[0];
+    cout << "Digite a idade da pessoa 1: ";
+    cin >> idades[0];
+    cout << "Digite o nome da pessoa 2: ";
+    cin >> nomes[1];
+    cout << "Digite a idade da pessoa 2: ";
+    cin >> idades[1];
+    cout << "Digite o nome da pessoa 3: ";
+    cin >> nomes[2];
+    cout << "Digite a idade da pessoa 3: ";
+    cin >> idades[2];
+    cout << "Digite o nome da pessoa 4: ";
+    cin >> nomes[3];
+    cout << "Digite a idade da pessoa 4: ";
+    cin >> idades[3];
+    cout << "Digite o nome da pessoa 5: ";
+    cin >> nomes[4];
+    cout << "Digite a idade da pessoa 5: ";
+    cin >> idades[4];
+    cout << "Digite o nome da pessoa 6: ";
+    cin >> nomes[5];
+    cout << "Digite a idade da pessoa 6: ";
+    cin >> idades[5];
+    cout << "Digite o nome da pessoa 7: ";
+    cin >> nomes[6];
+    cout << "Digite a idade da pessoa 7: ";
+    cin >> idades[6];
+    cout << "Digite o nome da pessoa 8: ";
+    cin >> nomes[7];
+    cout << "Digite a idade da pessoa 8: ";
+    cin >> idades[7];
+    cout << "Digite o nome da pessoa 9: ";
+    cin >> nomes[8];
+    cout << "Digite a idade da pessoa 9: ";
+    cin >> idades[8];
+    cout << "Digite o nome da pessoa 10: ";
+    cin >> nomes[9];
+    cout << "Digite a idade da pessoa 10: ";
+    cin >> idades[9];
+    cout << "Lista de nomes e idades:" << endl;
+    cout << nomes[0] << "\t" << idades[0] << endl;
+    cout << nomes[1] << "\t" << idades[1] << endl;
+    cout << nomes[2] << "\t" << idades[2] << endl;
+    cout << nomes[3] << "\t" << idades[3] << endl;
+    cout << nomes[4] << "\t" << idades[4] << endl;
+    cout << nomes[5] << "\t" << idades[5] << endl;
+    cout << nomes[6] << "\t" << idades[6] << endl;
+    cout << nomes[7] << "\t" << idades[7] << endl;
+    cout << nomes[8] << "\t" << idades[8] << endl;
+    cout << nomes[9] << "\t" << idades[9] << endl;
+
+    // Exercício 2
+    char produtos[20][50];
+    float precos[20];
+    cout << "Digite o nome do produto 1: ";
+    cin >> produtos[0];
+    cout << "Digite o preço do produto 1: ";
+    cin >> precos[0];
+    cout << "Digite o nome do produto 2: ";
+    cin >> produtos[1];
+    cout << "Digite o preço do produto 2: ";
+    cin >> precos[1];
+    cout << "Digite o nome do produto 3: ";
+    cin >> produtos[2];
+    cout << "Digite o preço do produto 3: ";
+    cin >> precos[2];
+    cout << "Digite o nome do produto 4: ";
+    cin >> produtos[3];
+    cout << "Digite o preço do produto 4: ";
+    cin >> precos[3];
+    cout << "Digite o nome do produto 5: ";
+    cin >> produtos[4];
+    cout << "Digite o preço do produto 5: ";
+    cin >> precos[4];
+    cout << "Digite o nome do produto 6: ";
+    cin >> produtos[5];
+    cout << "Digite o preço do produto 6: ";
+    cin >> precos[5];
+    cout << "Digite o nome do produto 7: ";
+    cin >> produtos[6];
+    cout << "Digite o preço do produto 7: ";
+    cin >> precos[6];
+    cout << "Digite o nome do produto 8: ";
+    cin >> produtos[7];
+    cout << "Digite o preço do produto 8: ";
+    cin >> precos[7];
+    cout << "Digite o nome do produto 9: ";
+    cin >> produtos[8];
+    cout << "Digite o preço do produto 9: ";
+    cin >> precos[8];
+    cout << "Digite o nome do produto 10: ";
+    cin >> produtos[9];
+    cout << "Digite o preço do produto 10: ";
+    cin >> precos[9];
+    cout << "Lista de produtos e preços:" << endl;
+    cout << produtos[0] << "\tR$ " << precos[0] << endl;
+    cout << produtos[1] << "\tR$ " << precos[1] << endl;
+    cout << produtos[2] << "\tR$ " << precos[2] << endl;
+    cout << produtos[3] << "\tR$ " << precos[3] << endl;
+    cout << produtos[4] << "\tR$ " << precos[4] << endl;
+    cout << produtos[5] << "\tR$ " << precos[5] << endl;
+    cout << produtos[6] << "\tR$ " << precos[6] << endl;
+    cout << produtos[7] << "\tR$ " << precos[7] << endl;
+    cout << produtos[8] << "\tR$ " << precos[8] << endl;
+    cout << produtos[9] << "\tR$ " << precos[9] << endl;
+
+    // Exercício 3
+    char cidades[15][50];
+    cout << "Digite o nome da cidade 1: ";
+    cin >> cidades[0];
+    cout << "Digite o nome da cidade 2: ";
+    cin >> cidades[1];
+    cout << "Digite o nome da cidade 3: ";
+    cin >> cidades[2];
+    cout << "Digite o nome da cidade 4: ";
+    cin >> cidades[3];
+    cout << "Digite o nome da cidade 5: ";
+    cin >> cidades[4];
+    cout << "Digite o nome da cidade 6: ";
+    cin >> cidades[5];
+    cout << "Digite o nome da cidade 7: ";
+    cin >> cidades[6];
+    cout << "Digite o nome da cidade 8: ";
+    cin >> cidades[7];
+    cout << "Digite o nome da cidade 9: ";
+    cin >> cidades[8];
+    cout << "Digite o nome da cidade 10: ";
+    cin >> cidades[9];
+    cout << "Digite o nome da cidade 11: ";
+    cin >> cidades[10];
+    cout << "Digite o nome da cidade 12: ";
+    cin >> cidades[11];
+    cout << "Digite o nome da cidade 13: ";
+    cin >> cidades[12];
+    cout << "Digite o nome da cidade 14: ";
+    cin >> cidades[13];
+    cout << "Digite o nome da cidade 15: ";
+    cin >> cidades[14];
+    // Ordenando as cidades
+    if (strcmp(cidades[0], cidades[1]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[0]);
+        strcpy(cidades[0], cidades[1]);
+        strcpy(cidades[1], temp);
+    }
+    if (strcmp(cidades[1], cidades[2]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[1]);
+        strcpy(cidades[1], cidades[2]);
+        strcpy(cidades[2], temp);
+    }
+    if (strcmp(cidades[2], cidades[3]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[2]);
+        strcpy(cidades[2], cidades[3]);
+        strcpy(cidades[3], temp);
+    }
+    if (strcmp(cidades[3], cidades[4]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[3]);
+        strcpy(cidades[3], cidades[4]);
+        strcpy(cidades[4], temp);
+    }
+    if (strcmp(cidades[4], cidades[5]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[4]);
+        strcpy(cidades[4], cidades[5]);
+        strcpy(cidades[5], temp);
+    }
+    if (strcmp(cidades[5], cidades[6]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[5]);
+        strcpy(cidades[5], cidades[6]);
+        strcpy(cidades[6], temp);
+    }
+    if (strcmp(cidades[6], cidades[7]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[6]);
+        strcpy(cidades[6], cidades[7]);
+        strcpy(cidades[7], temp);
+    }
+    if (strcmp(cidades[7], cidades[8]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[7]);
+        strcpy(cidades[7], cidades[8]);
+        strcpy(cidades[8], temp);
+    }
+    if (strcmp(cidades[8], cidades[9]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[8]);
+        strcpy(cidades[8], cidades[9]);
+        strcpy(cidades[9], temp);
+    }
+    if (strcmp(cidades[9], cidades[10]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[9]);
+        strcpy(cidades[9], cidades[10]);
+        strcpy(cidades[10], temp);
+    }
+    if (strcmp(cidades[10], cidades[11]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[10]);
+        strcpy(cidades[10], cidades[11]);
+        strcpy(cidades[11], temp);
+    }
+    if (strcmp(cidades[11], cidades[12]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[11]);
+        strcpy(cidades[11], cidades[12]);
+        strcpy(cidades[12], temp);
+    }
+    if (strcmp(cidades[12], cidades[13]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[12]);
+        strcpy(cidades[12], cidades[13]);
+        strcpy(cidades[13], temp);
+    }
+    if (strcmp(cidades[13], cidades[14]) > 0) {
+        char temp[50];
+        strcpy(temp, cidades[13]);
+        strcpy(cidades[13], cidades[14]);
+        strcpy(cidades[14], temp);
+    }
+    cout << "Lista de cidades em ordem alfabética:" << endl;
+    for (int i = 0; i < 15; i++) {
+        cout << cidades[i] << endl;
+    }
+
+    // Exercício 4
+    char texto_contagem[50];
+    cout << "Digite um texto: ";
+    cin.ignore();
+    cin.getline(texto_contagem, 50);
+    int num_palavras = 1;
+    for (char c : texto_contagem) {
+        if (c == ' ') {
+            num_palavras++;
+        }
+    }
+    cout << "Número de palavras no texto: " << num_palavras << endl;
+
+    // Exercício 5
+    char frase_longa[20];
+    cout << "Digite uma frase: ";
+    cin.ignore();
+    cin.getline(frase_longa, 20);
+    char palavra_mais_longa[20];
+    strcpy(palavra_mais_longa, frase_longa);
+    char *token = strtok(palavra_mais_longa, " ");
+    char *mais_longa = token;
+    while (token != nullptr) {
+        if (strlen(token) > strlen(mais_longa)) {
+            mais_longa = token;
+        }
+        token = strtok(nullptr, " ");
+    }
+    cout << "Palavra mais longa: " << mais_longa << endl;
+
+    return 0;
 }
-palavras++; // Conta a última palavra
-frases++; // Conta a última frase
-paragrafos++; // Conta o último parágrafo
-printf("O número de palavras no texto é: %d\n", palavras);
-printf("O número de frases no texto é: %d\n", frases);
-printf("O número de parágrafos no texto é: %d\n", paragrafos);
